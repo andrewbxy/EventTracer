@@ -34,18 +34,18 @@ We have provided our trained checkpoint and the corresponding ONNX file, which a
 
 TODO: instruction on Falcor integration and event stream rendering.
 
+### Using ETScenes
+If you simply want to use the high temporal resolution ETScenes dataset, you may download it from [here](https://huggingface.co/datasets/andrewbxy/ETScenes). Under each directory (except for `EvSNet-training`, which contains training data for EvSNet), there are several `.npz` files containing event streams simulated with different tools, and an `images` folder which contains the reference low-FPS RGB images.
+
 ## Training Your Own Model
 ### Training with ETScenes
-TODO: download instruction for ETScenes.
-
-Then, you can train EvSNet by simply running
+You may download our training data of EvSNet from [here](https://huggingface.co/datasets/andrewbxy/ETScenes). Specifically, the `EvSNet-training` directory contains paired RGB-event data from 6 scenes, where `${scene_name}_64SPP_images` stores low-SPP RGB images (input to EvSNet) and `${scene_name}_2048SPP_events` stores high-SPP simulated event streams (GT for training EvSNet). You should replace `data_dirs` in `train.py` by the actual paths to each scene, and then you can train EvSNet by simply running
 ```python
 python train.py --expname "${exp_name}"
 ```
-You should replace `data_dirs` by a list of paths to datasets before training.
 
 ### Training with Custom Data
-TODO
+TODO: instruction on rendering RGB images with Falcor, event simulation with v2e and data processing.
 
 ## Acknowledgement
 

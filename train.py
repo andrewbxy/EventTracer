@@ -73,8 +73,8 @@ random.shuffle(positions)
 train_positions = positions[:int(len(positions) * 0.8)]
 val_positions = positions[int(len(positions) * 0.8):]
 
-data_dirs = ["YOUR_PATH_TO_DATASET"]
-max_lens = [1984]
+data_dirs = ["Bistro-Exterior-Day", "Bistro-Exterior-Night", "Bistro-Interior", "classroom", "kitchen", "staircase"]
+max_lens = [1984, 1984, 1984, 3968, 3968, 3968]
 
 train_datasets = []
 for data_dir, max_len in zip(data_dirs, max_lens):

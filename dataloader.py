@@ -20,7 +20,6 @@ class EventDataset(Dataset):
         type='log',
         train=True,
     ):
-        self.data_path = data_path
         self.positions = positions
         self.max_len = max_len
         self.batch_size = batch_size
@@ -28,10 +27,9 @@ class EventDataset(Dataset):
         self.type = type
         self.train = train
 
-        self.data_path = data_path
-        image_dir = os.path.join(self.data_path, "Output")
-        event_dir = os.path.join(self.data_path, "Events")
-            
+        image_dir = data_path + "_64SPP_images"
+        event_dir = data_path + "_2048SPP_events"
+
         self.inputTile = TileBasedStorage(
             [64, 64, 64],
             [20, 12, 62],
