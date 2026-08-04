@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ### Using EvSNet
 We have provided our trained checkpoint and the corresponding ONNX file, which are used to obtain all results reported in the paper, in `evsnet_our`.
 
-TODO: instruction on Falcor integration and event stream rendering.
+*TODO: instruction on Falcor integration and event stream rendering.*
 
 ### Using ETScenes
 If you simply want to use the high temporal resolution ETScenes dataset, you may download it from [here](https://huggingface.co/datasets/andrewbxy/ETScenes). Under each directory (except for `EvSNet-training`, which contains training data for EvSNet), there are several `.npz` files containing event streams simulated with different tools, and an `images` folder which contains the reference low-FPS RGB images.
@@ -45,7 +45,7 @@ python train.py --expname "${exp_name}"
 ```
 
 ### Training with Custom Data
-TODO: instruction on rendering RGB images with Falcor, event simulation with v2e and data processing.
+*TODO: instruction on rendering RGB images with Falcor, event simulation with v2e and data processing.*
 
 ## Acknowledgement
 
